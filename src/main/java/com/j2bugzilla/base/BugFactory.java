@@ -104,7 +104,7 @@ public class BugFactory {
 	
 	/**
 	 * Sets the priority of the {@link Bug} to be created by this {@link BugFactory}.
-	 * @param priority A {@link Priority} describing the relative importance of a bug.
+	 * @param priority A describing the relative importance of a bug.
 	 * @return A reference to the original {@code BugFactory}.
 	 */
 	public BugFactory setPriority(String priority) {

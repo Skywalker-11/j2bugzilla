@@ -26,13 +26,13 @@
  * <p>
  * To begin using this library, a {@link BugzillaConnector} object must be created and used to connect to a remote instance. For example, one would use the 
  * following code snippet to connect to the sample Landfill installation:
- * <br />
- * <br />
+ * <br>
+ * <br>
  * <code>
- * BugzillaConnector conn = new BugzillaConnector();<br />
- * conn.connectTo("https://landfill.bugzilla.org/bugzilla-tip/");<br />
+ * BugzillaConnector conn = new BugzillaConnector();<br>
+ * conn.connectTo("https://landfill.bugzilla.org/bugzilla-tip/");<br>
  * </code>
- * <br />
+ * <br>
  * The connectTo method will attempt to connect to the /xmlrpc.cgi endpoint of the provided URL; this can also be directly appended to the URL string. 
  * If a connection cannot be established, a {@link ConnectionException} is thrown with an appropriate message.
  * </p>
@@ -40,17 +40,17 @@
  * Once a connection has been established, classes which implement {@link BugzillaMethod} may be passed to the 
  * {@link BugzillaConnector#executeMethod(BugzillaMethod)} method.
  * For example, to authenticate with the server, one would write the following:
- * <br />
- * <br />
+ * <br>
+ * <br>
  * <code>
- * BugzillaMethod logIn = new LogIn("user@sample.com", "somepass");<br />
- * try {<br />
- * 	conn.executeMethod(logIn);<br />
- * } catch(BugzillaException e) {<br />
- * 	e.printStackTrace();<br />
- * }<br />
+ * BugzillaMethod logIn = new LogIn("user@sample.com", "somepass");<br>
+ * try {<br>
+ * 	conn.executeMethod(logIn);<br>
+ * } catch(BugzillaException e) {<br>
+ * 	e.printStackTrace();<br>
+ * }<br>
  * </code>
- * <br />
+ * <br>
  * If the returned XML document includes a fault code, a {@link BugzillaException} will be thrown from {@code executeMethod}.
  * </p>
  */

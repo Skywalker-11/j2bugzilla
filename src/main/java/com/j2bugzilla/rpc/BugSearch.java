@@ -67,7 +67,7 @@ public class BugSearch implements BugzillaMethod {
         REPORTER("reporter"),
 
         /**
-         * The {@link jbugz.base.Bug.Status} field value
+         * The status field value
          */
         STATUS("status"),
 
@@ -78,7 +78,7 @@ public class BugSearch implements BugzillaMethod {
         RESOLUTION("resolution"),
 
         /**
-         * The {@link jbugz.base.Bug.Priority} field value
+         * The priority field value
          */
         PRIORITY("priority"),
 

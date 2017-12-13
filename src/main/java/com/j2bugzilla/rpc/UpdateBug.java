@@ -46,7 +46,7 @@ public class UpdateBug implements BugzillaMethod {
 	 * Creates a new {@link UpdateBug} object to submit to the Bugzilla webservice. The {@link Bug} on the
 	 * installation identified by the id or alias of the bug provided will have its fields updated 
 	 * to match those of the values in the provided bug.
-	 * @param bug
+	 * @param bug a bug object where the field shall be updated
 	 */
 	public UpdateBug(Bug bug) {
 		this.bug = bug;

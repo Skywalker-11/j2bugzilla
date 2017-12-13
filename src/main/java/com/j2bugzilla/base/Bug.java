@@ -30,7 +30,7 @@ import com.j2bugzilla.base.Flag.Status;
  * It provides getter methods for various properties, such as the bug summary and status. To
  * obtain a new {@code Bug} object, you must use the {@link BugFactory} class which provides a fluent
  * interface for bug creation. Note that the {@code BugFactory} does not submit a report for you --
- * to actually add the created bug to your Bugzilla installation, you must use the {@link ReportBug}
+ * to actually add the created bug to your Bugzilla installation, you must use the {@link com.j2bugzilla.rpc.ReportBug}
  * method.
  *
  * @author Tom
@@ -221,7 +221,7 @@ public class Bug {
      * so managing the state of the bug is the responsibility of the caller.
      *
      * @param status A {@code String} representing the status of this bug.
-     * @see {@link #setResolution(String)}
+     * @see #setResolution(String)
      */
     public void setStatus(String status) {
         internalState.put("status", status);
@@ -231,7 +231,7 @@ public class Bug {
      * Returns the resolution of this {@link Bug} if it is closed, or null if it is still open.
      *
      * @return A {@code String} representing the resolution of a {@link Bug}.
-     * @see {@link @link com.j2bugzilla.rpc.GetLegalValues GetLegalValues} to retrieve a list of the defined resolutions for a specific installation.
+     * @see com.j2bugzilla.rpc.GetLegalValues to retrieve a list of the defined resolutions for a specific installation.
      */
     public String getResolution() {
         return (String) internalState.get("resolution");
@@ -246,7 +246,7 @@ public class Bug {
      * responsibility of the caller.
      *
      * @param resolution A {@code String} representing the resolution of this bug.
-     * @see {@link #clearResolution()}
+     * @see #clearResolution()
      */
     public void setResolution(String resolution) {
         internalState.put("resolution", resolution);

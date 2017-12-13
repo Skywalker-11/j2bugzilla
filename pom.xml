@@ -70,11 +70,11 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-        <sonar.jacoco.itReportPath>${project.build.directory}/jacoco-it.exec</sonar.jacoco.itReportPath>
+        <!--<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
+        <sonar.jacoco.itReportPath>${project.build.directory}/jacoco-it.exec</sonar.jacoco.itReportPath>-->
     </properties>
 
-    <profiles>
+    <!--<profiles>
         <profile>
             <id>integration-test</id>
             <build>
@@ -100,11 +100,12 @@
                 </plugins>
             </build>
         </profile>
-    </profiles>
+    </profiles>-->
 
     <build>
 
         <plugins>
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -117,7 +118,6 @@
                     <showWarnings>true</showWarnings>
                 </configuration>
             </plugin>
-            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
